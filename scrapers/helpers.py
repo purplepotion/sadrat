@@ -1,7 +1,8 @@
 from requests import get
 from requests.exceptions import RequestException
 from contextlib import closing
-from bs4 import BeautifulSoup
+
+# Code Credits - realpython.com
 
 
 class Webrequests:
@@ -43,4 +44,12 @@ class Webrequests:
         make it do anything.
         """
         print(e)
+
+
+class Preprocessing:
+    """contains preprocessing methods for NLP"""
+
+    def __init__(self):
+        pass
+
 
