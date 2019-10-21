@@ -8,7 +8,7 @@ reddit = praw.Reddit(
     client_id="6bN05f96P-YKeQ",
     client_secret="CW4Tg6zoLVr206XCUsQMfz4C5pk",
     username="perplexed_v",
-    password="reddit_scrapper",
+    password="********",
     user_agent="reddit_scrapper",
 )
 
