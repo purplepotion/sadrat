@@ -8,19 +8,60 @@ reddit = praw.Reddit(
     client_id="6bN05f96P-YKeQ",
     client_secret="CW4Tg6zoLVr206XCUsQMfz4C5pk",
     username="perplexed_v",
-    password="********",
+    password="reddit_scrapper",
     user_agent="reddit_scrapper",
 )
 
 
 class RedditScraper:
+    """
+        A class used to represent Reddit Scraper
+
+        ...
+
+        Attributes
+        ----------
+        sub: str
+            the name of subreddit
+        sort : str
+            sort type for the subreddit
+        limit : int
+            the number of posts
+        mode : str
+            opening mode for csv file
+
+        Methods
+        -------
+       set_sort()
+            returns sort type of the subreddit
+       get_posts()
+            gets unique posts from subreddit and adds them to pandas dataframe(exported to CSV)
+       get_date()
+            converts scraped date and time of posts to UTC format
+    """
+
     def __init__(self, sub, sort="new", limit=1000, mode="w"):
+        """
+              Parameters
+              ----------
+              sub : str
+                  the name of subreddit
+              sort : str
+                  sort type for the subreddit
+              limit : int
+                  the number of posts
+              mode : str
+                  opening mode for csv file
+        """
         self.sub = sub
         self.sort = sort
         self.limit = limit
         self.mode = mode
 
     def set_sort(self):
+        """
+           Returns sort type for the subreddit with default as sort = "new"
+        """
         if self.sort == "new":
             return self.sort, reddit.subreddit(self.sub).new(limit=self.limit)
         elif self.sort == "top":
@@ -33,7 +74,10 @@ class RedditScraper:
             return self.sort, reddit.subreddit(self.sub).hot(limitit=self.limit)
 
     def get_posts(self):
-        """Get unique posts from subreddits."""
+        """
+           Get unique posts from subreddit and add to pandas dataframe(exported to CSV)
+
+        """
 
         sub_dict = {"title": [], "id": [], "text": [], "created": []}
         csv = f"posts.csv"
@@ -66,6 +110,10 @@ class RedditScraper:
         sub_data = pd.DataFrame(sub_dict)
 
         def get_date(created):
+            """
+               Converts scraped date and time to UTC format
+            """
+
             return dt.datetime.fromtimestamp(created)
 
         _timestamp = sub_data["created"].apply(get_date)
