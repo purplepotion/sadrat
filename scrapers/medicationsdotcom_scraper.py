@@ -91,7 +91,7 @@ def save_to_disk(text_corpus, drugname):
     """save the scrapped text to csv
     @params:
     """
-    with open("/Users/jarvis/Desktop/CODE/sadrat/datasets/medications_dot_com_data.csv", 'w') as file:
+    with open("/Users/jarvis/Desktop/CODE/sadrat/datasets/medications_dot_com_data.csv", 'a') as file:
         for i in range(len(text_corpus)):
             row = [i, drugname, text_corpus[i]]
             writer = csv.writer(file)
@@ -100,9 +100,14 @@ def save_to_disk(text_corpus, drugname):
 
 
 # Driver Code
-drug = "levaquin"
-comments = get_comments(drug)
-save_to_disk(comments, drug)
+druglist = ["lisinopril", "avelox", "prednisone", "cipro", "floxin", "elavil", "norvasc", "cozaar", "hyzaar", "femara",
+            "methylpred-dp","aricept", "versed", "questran", "welchol", "venofer", "avalide", "topamax", "yaz", "geodon"
+            , "warfarin-sodium"]
+for drug in druglist:
+    comments = get_comments(drug)
+    save_to_disk(comments, drug)
+
+
 
 
 
