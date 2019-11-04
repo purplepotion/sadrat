@@ -145,3 +145,4 @@ if __name__ == "__main__":
     ]
     for name in subreddits:
         RedditScraper(name, limit=1000, mode="w", sort="new").get_posts()
+

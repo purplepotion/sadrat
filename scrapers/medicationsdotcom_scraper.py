@@ -106,8 +106,3 @@ druglist = ["lisinopril", "avelox", "prednisone", "cipro", "floxin", "elavil", "
 for drug in druglist:
     comments = get_comments(drug)
     save_to_disk(comments, drug)
-
-
-
-
-
