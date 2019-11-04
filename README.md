@@ -10,3 +10,12 @@ To correctly instal spacy, run these command in sequence in your Virtual environ
 to avoid getting runtime exceptions.
 <br>`pip install spacy` <br>
 `python -m spacy download en`<br>
+
+### Installing TextBlob
+`pip install textblob`<br>
+`python -m textblob.download_corpora`
+
+### Setting up the Jupyter Notebook Development Environment for Research:
+`pip install jupyter`  - In your virtual environment
+`ipython kernel install --user --name=yourvirtualenvname` - To add a jupyter kernel
+ 

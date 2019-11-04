@@ -1,12 +1,18 @@
 from requests import get
 from requests.exceptions import RequestException
 from contextlib import closing
-
-# Code Credits - realpython.com
+import re
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+from nltk.stem import PorterStemmer
 
 
 class Webrequests:
-    """Tools to download web pages"""
+    """
+    Tools to download web pages
+    Code Credits - realpython.com
+
+    """
 
     def __init__(self):
         pass
@@ -51,5 +57,36 @@ class Preprocessing:
 
     def __init__(self):
         pass
+
+    def custom_preprocessor(self, text):
+        """
+        @TODO - Write tests for this function
+        convert all letters to lower case
+        remove all numbers and special characters
+        remove punctuations, accent marks etc
+        remove stop words
+        lemmatize all words
+
+        @params: text - str
+        @returns: list of preprocessed words
+
+        """
+        stop_list = set(stopwords.words('english'))
+        text = text.lower()  # convert to lowercase
+        text = re.sub(r'\d+', '', text)  # remove numbers
+        text = re.sub('[!#$?,.:";]', '', text) # remove punctuation
+        text = text.strip()  # remove additional whitespace
+        word_tokens = word_tokenize(text)
+        filtered_sentence = [x for x in word_tokens if not x in stop_list]
+        stemmer = PorterStemmer()
+        corpus = []
+        for word in filtered_sentence:
+            corpus.append(stemmer.stem(word))
+
+        return corpus
+
+
+
+
 
 
