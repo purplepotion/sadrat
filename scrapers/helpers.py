@@ -71,10 +71,16 @@ class Preprocessing:
         @returns: list of preprocessed words
 
         """
+        if type(text) != str:
+            raise Exception("a string is expected to be passed but instead, {} was passed".format(type(text)))
+
+        if text == "":
+            raise Exception("An empty string was passed which was not expected")
+
         stop_list = set(stopwords.words('english'))
         text = text.lower()  # convert to lowercase
         text = re.sub(r'\d+', '', text)  # remove numbers
-        text = re.sub('[!#$?,.:";]', '', text) # remove punctuation
+        text = re.sub('[!#$?,.:";]', '', text)  # remove punctuation
         text = text.strip()  # remove additional whitespace
         word_tokens = word_tokenize(text)
         filtered_sentence = [x for x in word_tokens if not x in stop_list]
@@ -84,6 +90,32 @@ class Preprocessing:
             corpus.append(stemmer.stem(word))
 
         return corpus
+
+    def simple_preprocessor_string(self, text):
+        """
+        same as custom preprocessor but without lemmatization and
+        returns a preprocessed string instead of a list of words
+        :param text: type(text): str
+        :return: str
+        """
+        if type(text) != str:
+            raise Exception("a string is expected to be passed but instead, {} was passed".format(type(text)))
+
+        if text == "":
+            raise Exception("An empty string was passed which was not expected")
+
+        stop_list = set(stopwords.words('english'))
+        text = text.lower()  # convert to lowercase
+        text = re.sub(r'\d+', '', text)  # remove numbers
+        text = re.sub('[!#$?,.:";]', '', text)  # remove punctuation
+        text = text.strip()  # remove additional whitespace
+        word_tokens = word_tokenize(text)
+        filtered_wordlist = [x for x in word_tokens if not x in stop_list]
+        filtered_sentence = ""
+        for word in filtered_wordlist:
+            filtered_sentence = filtered_sentence + word + " "
+
+        return filtered_sentence
 
 
 
