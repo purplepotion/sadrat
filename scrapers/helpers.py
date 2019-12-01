@@ -107,7 +107,7 @@ class Preprocessing:
         stop_list = set(stopwords.words('english'))
         text = text.lower()  # convert to lowercase
         text = re.sub(r'\d+', '', text)  # remove numbers
-        text = re.sub('[!#$?,.:";]', '', text)  # remove punctuation
+        text = re.sub('[!#$?.:";]', '', text)  # remove punctuation
         text = text.strip()  # remove additional whitespace
         word_tokens = word_tokenize(text)
         filtered_wordlist = [x for x in word_tokens if not x in stop_list]

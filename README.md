@@ -16,6 +16,6 @@ to avoid getting runtime exceptions.
 `python -m textblob.download_corpora`
 
 ### Setting up the Jupyter Notebook Development Environment for Research:
-`pip install jupyter`  - In your virtual environment
+`pip install jupyter`  - In your virtual environment <br>
 `ipython kernel install --user --name=yourvirtualenvname` - To add a jupyter kernel
  
