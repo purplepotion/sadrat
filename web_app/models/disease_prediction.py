@@ -64,6 +64,22 @@ def get_disease(drug):
     return disease
 
 
+def disease_matching(diseases_lists):
+    """
+    Parameters:
+        *argv: All lists about probable diseases from multiple sources.
+
+    Returns:
+        diseases: List of diseases which are most common or most probable.
+    """
+    n = len(diseases_lists)
+    diseases = set(diseases_lists[0])
+    for dis in diseases_lists:
+        dis = set(dis)
+        diseases = diseases.intersection(dis)
+    return diseases
+
+
 def disease_from_tweet(tweet):
     """
     This function takes in a tweet or any other string as an argument
@@ -77,26 +93,19 @@ def disease_from_tweet(tweet):
     """
     doc = nlp(tweet)
     drugs = []
+    ds = []
     diseases = []
     for entity in doc.ents:
         drug = entity.text
         label = entity.label_
         if label == "CHEMICAL" and drug not in drugs:
-            diseases.extend(get_disease(drug))
+            diseases.append(get_disease(drug))
         elif label == "DISEASE" and drug not in drugs:
-            diseases.append(drug)
+            ds.append(drug)
         drugs.append(drug)
-    return diseases
-
-
-# text = 'My doctor prescribed me lisinopril because my BP was a little high.  I took the pill for 2 days and noticed ' \
-#         'a small mosquito looking bump in the center of my top lip.  About 3 hours later my lip was so big & numb I ' \
-#         'immediately went to the ER to find out lisinopril was the cause of it.  This is ridiculous Im embarrassed to ' \
-#         'go any place because of my lip. If any one is thinking about starting a law suite you can count me in. ... ' \
-#         'more »My doctor prescribed me lisinopril because my BP was a little high.  I took the pill for 2 days and ' \
-#         'noticed a small mosquito looking bump in the center of my top lip.  About 3 hours later my lip was so big & ' \
-#         'numb I immediately went to the ER to find out lisinopril was the cause of it.  This is ridiculous Im ' \
-#         'embarrassed to go any place because of my lip. If any one is thinking about starting a law suite you can ' \
-#         'count me in. '
-#
-# disease_from_tweet(text)
+    if len(ds):
+        diseases.append(ds)
+    if len(diseases) == 1:
+        return None
+    else:
+        return disease_matching(diseases)
