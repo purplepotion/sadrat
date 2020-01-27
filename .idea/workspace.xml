@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="054af6d0-b0ab-4ad5-99a8-702e67a2f2d5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web_app/watchman_test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/lf2_ankit.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/research/lf2_ankit.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_app/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/appdata/Conversion.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/appdata/Conversion.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web_app/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/index.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_app/watchman.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/utilities/live_tweets.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/utilities/live_tweets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/watchman_test.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,47 +29,32 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/datasets/adrmine.csv">
+          <provider selected="true" editor-type-id="csv-text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            </state>
+          </provider>
+          <provider editor-type-id="csv-table-editor">
+            <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web_app/index.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="96" column="14" lean-forward="true" selection-start-line="96" selection-start-column="14" selection-end-line="96" selection-end-column="14" />
+            <state relative-caret-position="1669">
+              <caret line="317" column="30" lean-forward="true" selection-start-line="317" selection-start-column="30" selection-end-line="317" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web_app/utilities/bounding_box.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web_app/map_index.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="9" lean-forward="true" selection-start-column="9" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web_app/watchman_test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="101" selection-start-line="8" selection-start-column="101" selection-end-line="8" selection-end-column="101" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/additional resources/ADR_lexicon.tsv">
+        <entry file="file://$PROJECT_DIR$/web_app/appdata/adrmine_tweets_with_locations.csv">
           <provider selected="true" editor-type-id="csv-text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
+            <state relative-caret-position="1860">
+              <caret line="124" column="80" selection-start-line="124" selection-start-column="80" selection-end-line="124" selection-end-column="80" />
             </state>
           </provider>
           <provider editor-type-id="csv-table-editor">
@@ -79,8 +63,36 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web_app/model_test.py">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/datasets/adrmine_tweets_with_locations.csv">
+          <provider selected="true" editor-type-id="csv-text-editor">
+            <state>
+              <caret column="23" selection-start-column="23" selection-end-column="23" />
+            </state>
+          </provider>
+          <provider editor-type-id="csv-table-editor">
+            <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web_app/utilities/get_recent_tweets.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="101" selection-start-line="8" selection-start-column="101" selection-end-line="8" selection-end-column="101" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web_app/utilities/live_tweets.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="130">
+              <caret line="30" column="29" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -129,8 +141,12 @@
         <option value="$PROJECT_DIR$/web_app/app.py" />
         <option value="$PROJECT_DIR$/web_app/watchman.py" />
         <option value="$PROJECT_DIR$/web_app/utilities/bounding_box.py" />
-        <option value="$PROJECT_DIR$/web_app/index.py" />
         <option value="$PROJECT_DIR$/web_app/watchman_test.py" />
+        <option value="$PROJECT_DIR$/web_app/utilities/live_tweets.py" />
+        <option value="$PROJECT_DIR$/web_app/appdata/live_tweets.csv" />
+        <option value="$PROJECT_DIR$/web_app/appdata/adrmine_tweets_with_locations.csv" />
+        <option value="$PROJECT_DIR$/web_app/index.py" />
+        <option value="$PROJECT_DIR$/web_app/utilities/get_recent_tweets.py" />
       </list>
     </option>
   </component>
@@ -156,12 +172,18 @@
             <path>
               <item name="sadrat" type="b2602c69:ProjectViewProjectNode" />
               <item name="sadrat" type="462c0819:PsiDirectoryNode" />
-              <item name="research" type="462c0819:PsiDirectoryNode" />
+              <item name="datasets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sadrat" type="b2602c69:ProjectViewProjectNode" />
               <item name="sadrat" type="462c0819:PsiDirectoryNode" />
               <item name="web_app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sadrat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sadrat" type="462c0819:PsiDirectoryNode" />
+              <item name="web_app" type="462c0819:PsiDirectoryNode" />
+              <item name="appdata" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -174,15 +196,16 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
-    <property name="last_opened_file_path" value="$APPLICATION_CONFIG_DIR$/scratches" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web_app/appdata" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$APPLICATION_CONFIG_DIR$/scratches" />
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/sample" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web_app/appdata" />
+      <recent name="$APPLICATION_CONFIG_DIR$/scratches" />
       <recent name="$PROJECT_DIR$/sample" />
     </key>
   </component>
@@ -198,7 +221,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.watchman">
+  <component name="RunManager" selected="Python.live_tweets">
     <configuration name="helpers" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="sadrat" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -241,7 +264,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="reddit_scraper" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="live_tweets" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="sadrat" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -249,11 +272,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scrapers" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/web_app/utilities" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scrapers/reddit_scraper.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/web_app/utilities/live_tweets.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -306,11 +329,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.live_tweets" />
         <item itemvalue="Python.watchman" />
         <item itemvalue="Python.index" />
         <item itemvalue="Python.scratch" />
         <item itemvalue="Python.helpers" />
-        <item itemvalue="Python.reddit_scraper" />
       </list>
     </recent_temporary>
   </component>
@@ -340,7 +363,7 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32871014" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32771084" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32771084" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3994452" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -356,12 +379,12 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32871014" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32871014" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32771084" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32771084" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3994452" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -369,8 +392,8 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32871014" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.27184466" />
-      <window_info anchor="bottom" id="Python Console" order="11" weight="0.43966714" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.23614457" />
+      <window_info anchor="bottom" id="Python Console" order="11" weight="0.43855423" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -504,16 +527,6 @@
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/datasets/download_tweets/train_tweet_ids.tsv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="-19100">
-          <caret line="41" column="46" selection-start-line="41" selection-start-column="46" selection-end-line="41" selection-end-column="46" />
-        </state>
-      </provider>
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/datasets/download_tweets/ReadMe.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="159">
@@ -555,18 +568,72 @@
     <entry file="file://$PROJECT_DIR$/web_app/model_test.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/datasets/adrmine.csv">
+    <entry file="file://$PROJECT_DIR$/web_app/appdata/gettweets.pickle">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/additional resources/ADR_lexicon.tsv">
       <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="435">
+          <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
         </state>
       </provider>
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web_app/appdata/gettweets.pickle">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/web_app/map_index.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="9" lean-forward="true" selection-start-column="9" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_app/watchman_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="101" selection-start-line="8" selection-start-column="101" selection-end-line="8" selection-end-column="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_app/appdata/tweets.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="99" lean-forward="true" selection-start-line="2" selection-start-column="99" selection-end-line="2" selection-end-column="99" />
+        </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_app/utilities/bounding_box.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="497">
+          <caret line="37" column="16" lean-forward="true" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datasets/tweets.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datasets/download_tweets/train_tweet_ids.tsv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="24" lean-forward="true" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+        </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_app/utilities/live_tweets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="30" column="29" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web_app/app.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -588,41 +655,57 @@
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/additional resources/ADR_lexicon.tsv">
+    <entry file="file://$PROJECT_DIR$/web_app/appdata/live_tweets.csv">
       <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
+        <state relative-caret-position="180">
+          <caret line="12" column="79" lean-forward="true" selection-start-line="12" selection-start-column="79" selection-end-line="12" selection-end-column="79" />
         </state>
       </provider>
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web_app/map_index.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="9" lean-forward="true" selection-start-column="9" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web_app/utilities/bounding_box.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web_app/watchman_test.py">
+    <entry file="file://$PROJECT_DIR$/web_app/utilities/get_recent_tweets.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="101" selection-start-line="8" selection-start-column="101" selection-end-line="8" selection-end-column="101" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/datasets/adrmine.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_app/appdata/adrmine_tweets_with_locations.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="1860">
+          <caret line="124" column="80" selection-start-line="124" selection-start-column="80" selection-end-line="124" selection-end-column="80" />
+        </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datasets/adrmine_tweets_with_locations.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state>
+          <caret column="23" selection-start-column="23" selection-end-column="23" />
+        </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web_app/index.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="96" column="14" lean-forward="true" selection-start-line="96" selection-start-column="14" selection-end-line="96" selection-end-column="14" />
+        <state relative-caret-position="1669">
+          <caret line="317" column="30" lean-forward="true" selection-start-line="317" selection-start-column="30" selection-end-line="317" selection-end-column="30" />
         </state>
       </provider>
     </entry>

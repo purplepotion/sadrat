@@ -3,7 +3,6 @@ import json
 import csv
 import pandas as pd
 from pandas.io.json import json_normalize
-from datetime import datetime, timedelta
 
 
 class StreamListener(tweepy.StreamListener):
@@ -34,16 +33,16 @@ class StreamListener(tweepy.StreamListener):
 
 
 
-
         # 'training_tweets_collection' does not exist it will be created.
         if "lang" in datajson and datajson["lang"] == "en" and datajson['geo'] != "":
             print(datajson["text"])
-            dd.to_csv('file1.csv', mode='a', header=False)
-
-
+            dd.to_csv("/Users/jarvis/Desktop/CODE/sadrat/web_app/appdata/live_tweets.csv", mode='a', header=False)
 
 def obj_func(coordinates):
     # These are provided to you through the Twitter API after you create a account
+    """:param
+    list of floats
+    """
     consumer_key = "hdeLGF1xnuvmMS7zMG2rkRrH8"
     consumer_secret = "GP0Kjp6iiPdG7L0MmZ1kLrRQLBVAdiNlnauqCE1CaemHXk68sq"
     access_token = "2463420950-kQ3Uq3qfa0bK4AQaa2uunI6CLeeq50qkNkyufZp"
@@ -60,6 +59,6 @@ def obj_func(coordinates):
     stream.filter(locations=coordinates)
 
 
-if __name__ == "__main__":
-    coordinates = list(map(float, input().split()))
-    obj_func(coordinates)
+# if __name__ == "__main__":
+#     coordinates = list(map(float, input().split()))
+#     obj_func(coordinates)
