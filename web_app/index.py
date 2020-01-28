@@ -11,6 +11,7 @@ import dash_bootstrap_components as dbc
 #import plotly
 import chart_studio
 import pandas as pd
+import  random
 
 # TODO: Load Pickle file for dropdown city options [DONE]
 with open ("/Users/jarvis/Desktop/CODE/sadrat/web_app/appdata/options.pickle","rb") as file1:
@@ -25,8 +26,8 @@ mapbox_style = "mapbox://styles/plotlymapbox/cjvprkf3t1kns1cqjxuxmwixz"
 
 from web_app.app import app, server
 from web_app.utilities.bounding_box import get_bounding_box
-from web_app.utilities.get_recent_tweets import get_tweet
 from web_app.utilities.live_tweets import obj_func
+from web_app.models.disease_prediction import disease_from_tweet
 
 colors = {
     'background': '#00000',
@@ -95,7 +96,7 @@ dbc.NavbarSimple(
 ),
     html.Br(),
     html.H5(
-        children="Disease Trend Analysis",
+        children="Disease Trend Analysis and ADR Metrics",
         style={
             'color':'#FF8364',
             'textAlign': "center"
@@ -137,15 +138,28 @@ dbc.NavbarSimple(
                     id='fetching-message',
                     color='info'
                 ),
-                html.Div(
-                    id='tweets-display-container'
+
+            html.Div([
+            dcc.Textarea(id='tweet',
+                placeholder='No tweet found',
+                value='',
+                style={'width': '100%',
+                       'color':'rgba(34,34,34,1)'
+                       }
                 ),
+            html.Button('Refresh', id='button'),
+                 ]),
+                html.Div([
+                 html.Br(),
+                    html.P("Detected diseases/conditions: ", style={"color": colors['text']}),
+                    dbc.Alert(id = "detected-diseases",color="success")
+                ]),
+                html.Div([
+                 html.Br(),
+                    html.P("ADR Probability: ", style={"color": colors['text']}),
+                    dbc.Alert(id="adr-proba",color="success")
+                ])
             ]),
-    dcc.Interval(
-        id='interval-component',
-        interval=1 * 1000,  # in milliseconds
-        n_intervals=0
-    )
 
     ]), width=4),
 
@@ -187,14 +201,7 @@ dbc.NavbarSimple(
                 ),
             ),
 
-    ]),width=8) ]),
-    html.H5(
-        children="Adverse Drug Reaction Classification",
-        style={
-            'color':"#FF8364",
-            'textAlign': 'center'
-        }
-    )
+    ]),width=8)])
     ])
 ])
 
@@ -208,24 +215,17 @@ def update_output(value):
     return "latitude = " + value_array[0]+ " longitude = " + value_array[1]
 
 
-# @app.callback(
-#     Output('fetching-message', 'children'),
-#     [Input('cities', 'value')]
-# )
-# def update_recent_tweets(value):
-#     value_arr = value.split()
-#     half_side_in_miles = 50
-#     bb_coordinates = get_bounding_box(float(value_arr[0]), float(value_arr[1]), half_side_in_miles)
-#     obj_func([bb_coordinates.lon_min, bb_coordinates.lat_min,bb_coordinates.lon_max, bb_coordinates.lat_max])
-#     return "fetching recent tweets at 50 miles radius from {}...".format(value)
-
 @app.callback(
-    Output("tweets-display-container", 'children'),
-    [Input('interval-component','n-intervals')]
+    Output('fetching-message', 'children'),
+    [Input('cities', 'value')]
 )
-def update_recent_tweets(n):
-    tweet = get_tweet()
-    return tweet
+def update_recent_tweets(value):
+    value_arr = value.split()
+    half_side_in_miles = 50
+    bb_coordinates = get_bounding_box(float(value_arr[0]), float(value_arr[1]), half_side_in_miles)
+    obj_func([bb_coordinates.lon_min, bb_coordinates.lat_min,bb_coordinates.lon_max, bb_coordinates.lat_max])
+    return "fetching recent tweets at 50 miles radius from {}...".format(value)
+
 
 # display map
 @app.callback(
@@ -313,6 +313,44 @@ def display_map(figure):
 
     fig = dict(data=data, layout=layout)
     return fig
+
+
+@app.callback(
+    Output(component_id='tweet', component_property='value'),
+    [Input('button', 'n_clicks')],
+    state=[State(component_id='tweet', component_property='value')]
+)
+def update_output_div(n_clicks, value):
+    df = pd.read_csv("/Users/jarvis/Desktop/CODE/sadrat/web_app/appdata/adrmine_tweets_with_locations.csv")
+
+    return (df.iloc[random.randrange(1,100,1)]["tweet"])
+
+@app.callback(
+    Output("detected-diseases", "children"),
+    [Input('tweet', 'value')]
+)
+def update_disease(value):
+    disease_list = disease_from_tweet(value)
+    dstr = ""
+    if len(disease_list) > 0:
+        for disease in disease_list:
+            dstr = dstr + disease + " , "
+        dstr = dstr[:-2]
+    else:
+        dstr = "This tweet does not indicate a possible disease or condition"
+
+    return dstr
+
+@app.callback(
+    Output("adr-proba", "children"),
+    [Input('tweet', 'value')]
+)
+def update_adr_proba(value):
+    df = pd.read_csv("/Users/jarvis/Desktop/CODE/sadrat/web_app/appdata/adrmine_tweets_with_locations.csv")
+    for _, x in df.loc[df["tweet"] == str(value)].iterrows():
+        label = x.label_proba
+        break
+    return  label
 
 if __name__ == '__main__':
     app.run_server(debug=True)

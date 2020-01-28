@@ -8,12 +8,12 @@ from scispacy.umls_linking import UmlsEntityLinker
 
 nlp = spacy.load("en_ner_bc5cdr_md")
 
-drugs_df = pd.read_csv(r"D:\Events\GE Hackathon\sadrat\additional resources\drug.csv")
+drugs_df = pd.read_csv("/Users/jarvis/Desktop/CODE/sadrat/additional resources/drug.csv")
 drugs_df.drop(['drug_id', 'drugbank_id', 'pubchem_cid'], axis=1, inplace=True)
 drugs_df.dropna(axis=0, inplace=True)
 drugs_df.head()
 
-with open(r"D:\Events\GE Hackathon\sadrat\additional resources\drug_disease.json", "r") as file:
+with open("/Users/jarvis/Desktop/CODE/sadrat/additional resources/drug_disease.json", "r") as file:
     drug_disease = json.load(file)
 
 
@@ -72,7 +72,6 @@ def disease_matching(diseases_lists):
     Returns:
         diseases: List of diseases which are most common or most probable.
     """
-    n = len(diseases_lists)
     diseases = set(diseases_lists[0])
     for dis in diseases_lists:
         dis = set(dis)
@@ -99,13 +98,19 @@ def disease_from_tweet(tweet):
         drug = entity.text
         label = entity.label_
         if label == "CHEMICAL" and drug not in drugs:
-            diseases.append(get_disease(drug))
+            if get_disease(drug) is not None:
+                diseases.append(get_disease(drug))
         elif label == "DISEASE" and drug not in drugs:
             ds.append(drug)
         drugs.append(drug)
     if len(ds):
+        ds = [d.capitalize() for d in ds]
         diseases.append(ds)
     if len(diseases) == 1:
-        return None
+        return ds
+    if diseases == []:
+        return []
     else:
-        return disease_matching(diseases)
+        return list(disease_matching(diseases))
+if __name__ == '__main__':
+    disease_from_tweet("That said it's become too much recently and I've caved and agreed to go see a dietician :(")
