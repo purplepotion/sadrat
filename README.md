@@ -18,4 +18,6 @@ to avoid getting runtime exceptions.
 ### Setting up the Jupyter Notebook Development Environment for Research:
 `pip install jupyter`  - In your virtual environment <br>
 `ipython kernel install --user --name=yourvirtualenvname` - To add a jupyter kernel
+
+![Sadrat WebApp](https://github.com/007vedant/sadrat/blob/master/IMG-20200213-WA0032.jpg)
  
