@@ -38,7 +38,7 @@ OOP, Web development with flask, working with APIs, libraries and frameworks.
 3. Learn about [flask](https://flask.palletsprojects.com/en/1.1.x/) and [dash](https://dash.plotly.com/) - for contributing to the web app
 
 #### What if I don't have any prerequisite knowledge? How can I contribute?
-Each an every person reading this is a potential contributor for us. We have contribution opportunities for everyone irrespective of knowledge and experience. You can contribute.<br>
+Each and every person reading this is a potential contributor for us. We have contribution opportunities for everyone irrespective of knowledge and experience. You can contribute.<br>
 1. For complete beginners having **no previous programming knowledge**: If you have spent some time reading about the project and what we are willing to achieve, you can contribute to the docs. You 
 can help us spread the word about this project and help us get more people involved :)
 2. People with Knowledge of Python but no ML knowledge: You can contribute to the web app. See (2.) above.
@@ -47,7 +47,7 @@ can help us spread the word about this project and help us get more people invol
 >What else will I get?<br>
 Friends! We are people from diverse backgrounds and interests. Some are even working/incoming FTEs in well known software firms. This would be a great way to know each other and contribute to a single cause!
 
-**NOTE**: Every contributor is valuable to us. Hence each and every contributor irrespective of the contribution, would be mentioned in the "contributors" section of the page.
+**NOTE**: Every contributor is valuable to us. Hence each and every contributor irrespective of the "type" of contribution, would be mentioned in the "contributors" section of the page.
 
 ##### COMMUNICATION
 All communications regarding FOSSHACK 2020 would take place in the #fosshack2020 Slack Channel : [LINK](https://join.slack.com/t/purplepotion/shared_invite/zt-harse3jn-LZGNpcSUJE5XFyvJfa~57Q) (expires in 30 days, i.e on 10th October 2020)
