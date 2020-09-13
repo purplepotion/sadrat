@@ -5,7 +5,7 @@ awscli==1.17.9
 backcall==0.1.0
 beautifulsoup4==4.8.0
 black==19.3b0
-bleach==3.1.0
+bleach==3.1.4
 blis==0.4.1
 boto==2.49.0
 boto3==1.10.14
@@ -128,6 +128,7 @@ traitlets==4.3.3
 tweepy==3.8.0
 update-checker==0.16
 urllib3==1.25.6
+vaderSentiment==3.3.2
 wasabi==0.4.0
 wcwidth==0.1.7
 webencodings==0.5.1
