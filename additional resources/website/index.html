@@ -1,1 +1,142 @@
-<h1> Hello World! Page will be up and running soon! </h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Sadrat</title>
+ <link rel="icon" href="./media/purplepotion_logo.png">
+
+
+ <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Righteous&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+ <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ <section class="container-fluid" id="navbarSection">
+  <nav class="navbar navbar-expand-lg navbar-dark">
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+     <span class="navbar-toggler-icon"></span>
+   </button>
+
+   <a class="navbar-brand" href="#">Sadrat</a>
+
+   <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+     <ul class="navbar-nav ml-auto" style="color: white;">
+       <li class="nav-item">
+         <a class="nav-link" href="#title">About</a>
+       </li>
+       <li class="nav-item">
+        <div class="dropdown">
+         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           Readme
+         </button>
+         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+           <a class="dropdown-item" href="#history">History and Motivation</a>
+           <a class="dropdown-item" href="#prerequisite">Prerequisite Knowledge</a>
+           <a class="dropdown-item" href="#research">Research Overview</a>
+         </div>
+       </div>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link" href="https://github.com/purplepotion/sadrat">Github</a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link" href="#footer">Contact</a>
+       </li>
+     </ul>
+   </div>
+ </nav>
+ </section>
+
+ <div class="container" id="content">
+    <div id="history">
+      <h2><strong>History and Motivation</strong></h2>
+  
+      <p><img class="picture" src="./media/history.png" alt="png file">
+              This project was started in Autumn Session 2019 by a research group at National Institute of Technology Rourkela under the guidance of Prof. B.P. Nayak(the same group that runs purplepotion) of Regenerative and Rehabilitative Medicine Laboratory, Department of Biomedical Engineering. The motivation behind this research is to improve the performance of the state-of-the art ML and DL models to detect Adverse Drug Reaction Signals(ADRS) from social media platforms like Twitter using the concept of Data Programming . <br>
+        How it might look like: <br>
+        Sample Tweet: <br>
+        Tweet: "Having Headaches since morning! I need to get off of crocin!" <br>
+        Sample Result: <br>
+        ADR Probability: 88% <br>
+        Detected Drug: Crocin <br>
+        Detected ADR: Headache
+        </p>
+      
+      <p>This was quite an easy one to guess. But in real scenarios, sentence structures can be very complicated. One of the major improvements and novelty we want to bring in the pipeline of performing such tasks is to remove the human involvement in preparing a labelled dataset in order to perform supervised learning, instead, we want to make the process programming weakly supervised strategies and at the same time reducing the noise generated during the process to a minimum. The above classification might seem a simple enough task for a modern classifier. But, the bigger challenge that we are attempting to solve here are the following: <br>
+      <ol>
+        <li>Creating a minimum noise, labelled training set for supervised classification.</li>
+        <li>Removing direct manual involvement in preparing the golden training and testing datasets.</li>
+        <li>Creating a highly scalable programmable alternative to maximize performance and minimize time required to generate labelled training sets.</li>
+      </ol> 
+      </p>
+      <p>Finally, we would develop a web app around the models to interact with them from the client side.</p>
+    </div>
+
+       
+
+   <div id="prerequisite">
+    <h2><strong>Prerequisite Knowledge</strong></h2>
+    <ol>
+      <li>A basic knowledge of Machine Learning(ML) and mathematics involved in ML.</li>
+      <li>An intermediate knowledge in Python (3.x) Programming Language. i.e. you should comfortable with OOP, Web development with flask, working with APIs, libraries and frameworks.</li>
+      <li><p>Project specific knowledge </p>
+        <ul>
+          <li>Learn about Data Programming from <a href="https://arxiv.org/abs/1605.07723#:~:text=We%20therefore%20propose%20a%20paradigm,are%20noisy%20and%20may%20conflict.">here</a>.</li>
+          <li>Learn about Snorkel from <a href="https://www.snorkel.org/">here</a></li>
+          <li>Learn about <a href="https://flask.palletsprojects.com/en/1.1.x/">flask</a> and <a href="https://dash.plotly.com/">dash</a> - for contributing to the web app</li>
+        </ul>
+      </li>
+    </ol>
+  
+    <p><strong>What if I don't have any prerequisite knowledge? How can I contribute?</strong><br>
+      Each and every person reading this is a potential contributor for us. We have contribution opportunities for everyone irrespective of knowledge and experience. You can contribute. <br>
+      <ul>
+        <li>For complete beginners having no previous programming knowledge: If you have spent some time reading about the project and what we are willing to achieve, you can contribute to the docs. You can help us spread the word about this project and help us get more people involved :)</li>
+        <li>People with Knowledge of Python but no ML knowledge: You can contribute to the web app. See (2.) above.</li>
+        <li>People with Knowledge of Python and ML: you should be able to contribute to each and everything we are working on here!</li>
+      </ul>
+      <p>What else will I get?<br>
+        <strong>Friends!</strong> We are people from diverse backgrounds and interests. Some are even working/incoming FTEs in well known software firms. This would be a great way to know each other and contribute to a single cause!
+      </p><br>
+      <strong>NOTE:</strong> Every contributor is valuable to us. Hence each and every contributor irrespective of the "type" of contribution, would be mentioned in the "contributors" section of the page.
+      </p>
+    
+   </div>
+   
+   <div id="research">
+     <h2><strong>Research Overview</strong></h2>
+     <p><img class="picture" src="./media/researchoveraview.png" alt="">
+       There is enough research evidence that social media can be an important source of indicating Adverse Drug Reactions and analyzing disease trends in a population. Although this signal is weak, many algorithms have been developed to extract the important signals that depict a valid ADR. However, the prediction of future disease trends from social media data in a population under study is a challenging task and breakthroughs have not been made in this direction. Also, another epidemiologic challenge that demands to be solved is predicting possible reason(s) behind the appearance of such trends for further verification and validation of the Early Warning System.</p><br>
+     <p>Hence, <strong>SADRAT</strong> would tackle the above-mentioned issues providing the pharmaceutical companies with the necessary parameters and predictive outcomes (i.e. Disease trends, probable reasons for disease etc. using predictive analytics) in a dashboard that would leverage their decision-making (related to marketing strategies, venturing into new market and the introduction of new and upgraded drugs) while targeting a particular population based on pivots such as season, age, gender, race, etc.</p>
+     <h3><strong>Installing Spacy</strong></h3>
+     <p>To correctly instal spacy, run these command in sequence in your Virtual environment to avoid getting runtime exceptions.</p>
+     <span class="instal">pip install spacy</span><br>
+     <span class="instal">python -m spacy download en</span><br>
+      <hr>
+     <h4><strong>Installing TextBlob</strong></h4>
+     <span class="instal">pip install textblob</span><br>
+     <span class="instal">python -m textblob.download_corpora</span><br>
+      <hr>
+     <h4><strong>Setting up the Jupyter Notebook Development Environment for Research:</strong></h4>
+     <p><span class="instal">pip install jupyter</span> - In your virtual environment</p>
+     <p><span class="instal">ipython kernel install --user --name=yourvirtualenvname</span> - To add a jupyter kernel</p>
+   </div>
+ </div>
+
+ <section id="footer">
+  <img class="footer-logo" src="./media/purplepotion_logo.png" alt="purplepotion logo">
+
+  <div class="">
+    <p><strong>Copyright © 2020, Purplepotion</strong></p>
+  </div>
+
+ </section>
+
+
+ <script src="https://kit.fontawesome.com/0451b9bb72.js" crossorigin="anonymous"></script>
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
