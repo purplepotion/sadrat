@@ -127,7 +127,7 @@ tqdm==4.36.1
 traitlets==4.3.3
 tweepy==3.8.0
 update-checker==0.16
-urllib3==1.25.6
+urllib3==1.26.5
 vaderSentiment==3.3.2
 wasabi==0.4.0
 wcwidth==0.1.7
