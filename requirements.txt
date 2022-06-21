@@ -68,7 +68,7 @@ networkx==2.3
 nltk==3.4.5
 nmslib==2.0.5
 notebook==6.4.1
-numpy==1.17.3
+numpy==1.22.0
 oauthlib==3.1.0
 pandas==0.25.2
 pandocfilters==1.4.2
